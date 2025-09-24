@@ -1,0 +1,42 @@
+{
+  "name": "whatsapp-bot",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
+    "type-check": "tsc --noEmit",
+    "db:setup": "echo 'Run the SQL schema in your Supabase SQL editor'",
+    "test:webhook": "curl -X GET 'http://localhost:3000/api/webhook/whatsapp?hub.mode=subscribe&hub.verify_token=your_webhook_verify_token&hub.challenge=test'"
+  },
+  "dependencies": {
+    "@google-cloud/vision": "^5.3.3",
+    "@google/generative-ai": "^0.24.1",
+    "@supabase/auth-helpers-nextjs": "^0.10.0",
+    "@supabase/ssr": "^0.7.0",
+    "@supabase/supabase-js": "^2.57.4",
+    "@types/multer": "^2.0.0",
+    "@types/sharp": "^0.31.1",
+    "axios": "^1.12.2",
+    "googleapis": "^160.0.0",
+    "multer": "^2.0.2",
+    "next": "15.5.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "sharp": "^0.34.4"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
